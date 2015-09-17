@@ -26,7 +26,7 @@
         </div>
         <div class="content" ng-view></div>
         <footer class="footer">
-            <p>&copy; EC|Wise 2015</p>
+            <p><strong>&copy; EC|Wise 2015</strong></p>
         </footer>
     </div>
 </div>
@@ -37,7 +37,8 @@
             jquery_src = "/lib/jquery-1.8.2.min.js";
     document.write('<script src=' + ('__proto__' in {} ? zepto_src : jquery_src) + '><\/script>');
 </script>
-<script src="/lib/angular.min.js"></script>
+<script src="/lib/angular/angular.min.js"></script>
+<script src="/lib/angular/angular-cookies.min.js"></script>
 <%- CDN(['/lib/underscore.min.js', '/lib/jquery.cookie.js']) %>
 <%- CDN(['/js/app.js', '/js/controllers.js', '/js/directives.js', '/js/filters.js', '/js/services.js', '/js/dom.js']) %>
 </body>

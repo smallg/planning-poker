@@ -1,5 +1,6 @@
 <div ng-init="configureRoom()">
     <p class="roomNumber">Room ID: {{roomId}}</p>
+    <p class="roomDisplayName">Display Name: {{username}}</p>
     <section class="cardPanel">
         <div class="row cardPanel-meta">
             <div class="span2 subheading">
@@ -54,7 +55,10 @@
         <div class="cards{{votingState}}" id="chosenCards">
             <div ng-repeat="vote in votes" ng-click="unvote(vote.sessionId)" class="card card--2-sided vote" selectedvote>
                 <div class="card--side-1">x</div>
-                <div class="card--side-2" cardvalue>{{vote.visibleVote}}</div>
+                <div class="card--side-2" cardvalue>
+                    <div class="vote-value">{{vote.visibleVote}}</div>
+                </div>
+                <div class="vote-name">{{vote.username}}</div>
             </div>
             <div ng-repeat="i in placeholderVotes" class="card card--placeholder">
                 &nbsp;
@@ -65,9 +69,6 @@
                 <div class="row">
                     <button ng-click="resetVote()" class="span2 btn" title="Start a new vote">
                         <i class="icon icon-refresh"></i> Reset
-                    </button>
-                    <button ng-click="forceReveal()" class="span2 btn" ng-disabled="forceRevealDisable" title="Force a reveal of all cards if there are some stragglers">
-                        <i class="icon icon-exclamation-sign"></i> Reveal
                     </button>
                 </div>
             </div>

@@ -4,8 +4,9 @@
 
   <label class="subheading" for="roomfield">Enter your name and room number:</label>
   <div class="row">
-    <input ng-model="room" ui-enter="enterRoom(room)" name="roomfield" id="roomfield" type="tel" maxlength="5" placeholder="room no" class="span2 roomUrl" />
-    <button ng-click="enterRoom(room)" class="span2 btn" title="Join an existing planning poker room" ng-disabled="{{disableButtons}}">Join room</button>
+    <input ng-model="username" name="username" id="username" type="text" maxlength="10" placeholder="your name" class="span2 roomUrl username" />
+    <input ng-model="room" ui-enter="enterRoom(room, username)" name="roomfield" id="roomfield" type="tel" maxlength="5" placeholder="room no" class="span2 roomUrl" />
+    <button ng-click="enterRoom(room, username)" class="span2 btn" title="Join an existing planning poker room" ng-disabled="{{disableButtons}}">Join room</button>
   </div>
   <label for="createRoom">or</label>
   <div class="row">
