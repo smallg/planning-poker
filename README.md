@@ -10,11 +10,11 @@
 
 npm install -g forever
 
-forever start -l forever.log -o out.log -e err.log server.js
+forever start -o out.log -e err.log server.js
 
 
 
-http://192.168.3.75:5000/95199
+http://192.168.3.75:5000
 
 
 cd /root/smallg/planning-poker
