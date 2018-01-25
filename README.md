@@ -1,4 +1,4 @@
-##Installation
+## Installation
     npm install -d
     /**node server.js**/
 
@@ -6,7 +6,7 @@
 
 
 
-##Run in linux
+## Run in linux
 
 npm install -g forever
 
